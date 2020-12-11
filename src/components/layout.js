@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import red from '@material-ui/core/colors/red';
 
 import Header from './header';
 import './layout.scss';
@@ -10,6 +11,10 @@ import './layout.scss';
 const theme = createMuiTheme({
   palette: {
     type: 'dark',
+    primary: red,
+    secondary: {
+      main: '#b9f6ca',
+    },
   },
 });
 
