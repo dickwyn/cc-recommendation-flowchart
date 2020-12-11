@@ -1,18 +1,12 @@
-const path = require('path')
-
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter MDX Basic',
+    title: 'Credit Card Recommendation Flowchart',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@chrisbiscardi',
+      "This flowchart offers a general, subjective guide to which credit cards to get in what order to maximize your overall churning profits, whether you're under 5/24 and chasing the SW companion pass, or over 5/24 and chasing cashback, or even a student brand-new to the churning game - and a few things in between, though it is geared towards helping new and new-ish churners plan out applications, not those of you who are LOL/24 (but maybe you'll find something useful in it too?).",
   },
   plugins: [
     {
       resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: { default: path.resolve('./src/components/layout.js') },
-      },
     },
     'gatsby-plugin-react-helmet',
     {
@@ -25,17 +19,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`
-      }
+        name: `data`,
+        path: `${__dirname}/data`,
+      },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-default-mdx-basic',
-        short_name: 'starter',
+        name: 'credit-card-recommendation-flowchart',
+        short_name: 'card-flowchart',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
@@ -47,4 +41,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};
