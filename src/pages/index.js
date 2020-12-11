@@ -8,10 +8,7 @@ import InfoIcon from '@material-ui/icons/Info';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import One from '../../data/yes-southwest-companion-pass.mdx';
-import Two from '../../data/no-southwest-companion-pass.mdx';
-import Three from '../../data/focus-on-travel.mdx';
-import Four from '../../data/focus-on-cashback.mdx';
+import RecommendationForm from '../components/recommendationForm';
 import Credits from '../../data/credits.mdx';
 import GeneralNotes from '../../data/general-notes.mdx';
 import NewbieNotes from '../../data/notes-for-newbies.mdx';
@@ -27,104 +24,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Card Recommendation Flowchart" />
 
-      <div className="question-container">
-        {answer === '' && (
-          <>
-            <div style={{ display: 'flex' }}>
-              <h1>Are you under 5/24?</h1>
-              <Button
-                target="_blank"
-                href="https://old.reddit.com/r/churning/wiki/index#wiki_chase_cc_rules.2C_including_5.2F24"
-                startIcon={<InfoIcon />}
-              >
-                Learn about 5/24
-              </Button>
-            </div>
-            <Button
-              variant="contained"
-              onClick={() => {
-                setAnswer(`${answer}0`);
-              }}
-            >
-              Yes
-            </Button>
-            <Button
-              variant="contained"
-              onClick={() => {
-                setAnswer(`${answer}1`);
-              }}
-            >
-              No
-            </Button>
-          </>
-        )}
-        {answer === '0' && (
-          <>
-            <div style={{ display: 'flex' }}>
-              <h1>Do you want the SW Companion Pass?</h1>
-            </div>
-            <Button
-              variant="contained"
-              onClick={() => {
-                setAnswer(`${answer}0`);
-              }}
-            >
-              Yes
-            </Button>
-            <Button
-              variant="contained"
-              onClick={() => {
-                setAnswer(`${answer}1`);
-              }}
-            >
-              No
-            </Button>
-          </>
-        )}
-        {answer === '1' && (
-          <>
-            <div style={{ display: 'flex' }}>
-              <h1>Are you focusing on travel or cashback?</h1>
-            </div>
-            <Button
-              variant="contained"
-              onClick={() => {
-                setAnswer(`${answer}0`);
-              }}
-            >
-              Travel
-            </Button>
-            <Button
-              variant="contained"
-              onClick={() => {
-                setAnswer(`${answer}1`);
-              }}
-            >
-              Cashback
-            </Button>
-          </>
-        )}
-        {answer.length === 2 && (
-          <>
-            <Button
-              variant="contained"
-              onClick={() => {
-                setAnswer(``);
-              }}
-            >
-              Reset
-            </Button>
-          </>
-        )}
-      </div>
-
-      <div className="answer-container" style={{ display: answer.length < 2 ? 'none' : 'block' }}>
-        {answer === '00' && <One />}
-        {answer === '01' && <Two />}
-        {answer === '10' && <Three />}
-        {answer === '11' && <Four />}
-      </div>
-
+      <RecommendationForm />
       <div className="accordion">
         <Accordion>
           <AccordionSummary

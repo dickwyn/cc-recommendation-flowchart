@@ -1,0 +1,26 @@
+.question-container {
+  display: grid;
+  justify-content: center;
+  height: 28%;
+  align-content: center;
+
+  .heading {
+  }
+
+  .actions {
+    display: grid;
+    width: 100%;
+    max-width: 380px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 1rem;
+    justify-self: center;
+
+    &.single {
+      grid-template-columns: 1fr;
+    }
+
+    button {
+      display: inline-block;
+    }
+  }
+}
