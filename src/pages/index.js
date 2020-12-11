@@ -26,6 +26,38 @@ const IndexPage = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
+            Full flowchart
+          </AccordionSummary>
+          <AccordionDetails>
+            <div
+              className="video"
+              style={{
+                position: 'relative',
+                paddingBottom: '56.25%' /* 16:9 */,
+                paddingTop: 25,
+                height: 0,
+              }}
+            >
+              <iframe
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+                src={`https://kevlarlover.s3.us-east-2.amazonaws.com/Card+Recommendation+Flowchart+v16.html`}
+                frameBorder="0"
+              />
+            </div>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
             General Notes
           </AccordionSummary>
           <AccordionDetails>
