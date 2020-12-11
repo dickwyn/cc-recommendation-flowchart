@@ -40,14 +40,10 @@ module.exports = {
     },
     `gatsby-plugin-material-ui`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
+
       options: {
-        fonts: [
-          {
-            family: `IBM Plex Sans`,
-            variants: [`400`, `400i`, `700`, `700i`],
-          },
-        ],
+        fonts: [`IBM Plex Sans\:400,400i,700,700i`],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
