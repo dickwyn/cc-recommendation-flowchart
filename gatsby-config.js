@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Credit Card Recommendation Flowchart',
+    title: 'Credit Card Recommendation',
     description:
       "This flowchart offers a general, subjective guide to which credit cards to get in what order to maximize your overall churning profits, whether you're under 5/24 and chasing the SW companion pass, or over 5/24 and chasing cashback, or even a student brand-new to the churning game - and a few things in between, though it is geared towards helping new and new-ish churners plan out applications, not those of you who are LOL/24 (but maybe you'll find something useful in it too?).",
     author: '@dickwyn',
