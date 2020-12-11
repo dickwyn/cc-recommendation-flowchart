@@ -25,7 +25,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Card Recommendation Flowchart" />
 
       {answer === '' && (
         <>
