@@ -1,0 +1,7 @@
+.accordion {
+  margin: 2rem 0;
+}
+
+.MuiAccordionDetails-root {
+  display: block !important;
+}
