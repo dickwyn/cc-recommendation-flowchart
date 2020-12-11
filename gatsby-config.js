@@ -8,6 +8,11 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          recommendations: require.resolve('./src/components/recommendations.js'),
+        },
+      },
     },
     'gatsby-plugin-react-helmet',
     {
@@ -20,8 +25,23 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `recommendations`,
+        path: `${__dirname}/data/recommendations`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `faq`,
+        path: `${__dirname}/data/faq`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `data`,
         path: `${__dirname}/data`,
+        ignore: [`/recommendations`, `/faq`],
       },
     },
     'gatsby-transformer-sharp',

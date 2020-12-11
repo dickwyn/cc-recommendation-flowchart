@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
-import One from '../../data/yes-southwest-companion-pass.mdx';
-import Two from '../../data/no-southwest-companion-pass.mdx';
-import Three from '../../data/focus-on-travel.mdx';
-import Four from '../../data/focus-on-cashback.mdx';
+import One from '../../data/recommendations/yes-southwest-companion-pass.mdx';
+import Two from '../../data/recommendations/no-southwest-companion-pass.mdx';
+import Three from '../../data/recommendations/focus-on-travel.mdx';
+import Four from '../../data/recommendations/focus-on-cashback.mdx';
 import './recommendationForm.scss';
 
 const RecommendationForm = () => {
