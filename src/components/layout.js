@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import red from '@material-ui/core/colors/red';
+import { name, version } from '../../package.json';
 
 import Header from './header';
 import './layout.scss';
@@ -35,6 +36,9 @@ const Layout = ({ children }) => (
           <CssBaseline />
           <Header siteTitle={data.site.siteMetadata.title} />
           <div className="content-container">{children}</div>
+          <footer>
+            {name} v{version}
+          </footer>
         </ThemeProvider>
       </>
     )}
