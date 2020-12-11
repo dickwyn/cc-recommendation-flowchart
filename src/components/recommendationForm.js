@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
+import Tooltip from '@material-ui/core/Tooltip';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import One from '../../data/recommendations/yes-southwest-companion-pass.mdx';
 import Two from '../../data/recommendations/no-southwest-companion-pass.mdx';
@@ -19,12 +20,17 @@ const RecommendationForm = () => {
             <div className="heading">
               <h1>
                 Are you under{' '}
-                <Link
-                  target="_blank"
-                  href="https://old.reddit.com/r/churning/wiki/index#wiki_chase_cc_rules.2C_including_5.2F24"
+                <Tooltip
+                  title="Learn more about what 5/24 means"
+                  aria-label="Learn more about what 5/24 means"
                 >
-                  5/24 <OpenInNewIcon />
-                </Link>{' '}
+                  <Link
+                    target="_blank"
+                    href="https://old.reddit.com/r/churning/wiki/index#wiki_chase_cc_rules.2C_including_5.2F24"
+                  >
+                    5/24 <OpenInNewIcon />
+                  </Link>
+                </Tooltip>{' '}
                 ?
               </h1>
             </div>
