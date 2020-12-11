@@ -5,3 +5,18 @@
 .MuiAccordionDetails-root {
   display: block !important;
 }
+
+.full-flowchart-container {
+  position: relative;
+  padding-bottom: 0;
+  padding-top: 25;
+  height: 0;
+
+  iframe {
+    position: 'absolute';
+    top: 0;
+    left: 0;
+    width: '100%';
+    height: '100%';
+  }
+}

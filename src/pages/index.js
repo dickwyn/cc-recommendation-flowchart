@@ -29,24 +29,9 @@ const IndexPage = () => {
             Full flowchart
           </AccordionSummary>
           <AccordionDetails>
-            <div
-              className="video"
-              style={{
-                position: 'relative',
-                paddingBottom: '56.25%' /* 16:9 */,
-                paddingTop: 25,
-                height: 0,
-              }}
-            >
+            <div className="full-flowchart-container">
               <iframe
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-                src={`https://kevlarlover.s3.us-east-2.amazonaws.com/Card+Recommendation+Flowchart+v16.html`}
+                src="https://kevlarlover.s3.us-east-2.amazonaws.com/Card+Recommendation+Flowchart+v16.html"
                 frameBorder="0"
               />
             </div>
