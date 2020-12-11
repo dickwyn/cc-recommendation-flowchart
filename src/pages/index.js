@@ -18,7 +18,7 @@ import NewbieNotes from '../../data/notes-for-newbies.mdx';
 import ChaseNotes from '../../data/notes-on-chase-cards.mdx';
 import TimingNotes from '../../data/notes-for-timing.mdx';
 
-import './index.css';
+import './index.scss';
 
 const IndexPage = () => {
   const [answer, setAnswer] = useState('');
