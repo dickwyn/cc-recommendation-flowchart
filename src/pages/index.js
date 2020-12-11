@@ -27,94 +27,96 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Card Recommendation Flowchart" />
 
-      {answer === '' && (
-        <>
-          <div style={{ display: 'flex' }}>
-            <h1>Are you under 5/24?</h1>
+      <div className="question-container">
+        {answer === '' && (
+          <>
+            <div style={{ display: 'flex' }}>
+              <h1>Are you under 5/24?</h1>
+              <Button
+                target="_blank"
+                href="https://old.reddit.com/r/churning/wiki/index#wiki_chase_cc_rules.2C_including_5.2F24"
+                startIcon={<InfoIcon />}
+              >
+                Learn about 5/24
+              </Button>
+            </div>
             <Button
-              target="_blank"
-              href="https://old.reddit.com/r/churning/wiki/index#wiki_chase_cc_rules.2C_including_5.2F24"
-              startIcon={<InfoIcon />}
+              variant="contained"
+              onClick={() => {
+                setAnswer(`${answer}0`);
+              }}
             >
-              Learn about 5/24
+              Yes
             </Button>
-          </div>
-          <Button
-            variant="contained"
-            onClick={() => {
-              setAnswer(`${answer}0`);
-            }}
-          >
-            Yes
-          </Button>
-          <Button
-            variant="contained"
-            onClick={() => {
-              setAnswer(`${answer}1`);
-            }}
-          >
-            No
-          </Button>
-        </>
-      )}
-      {answer === '0' && (
-        <>
-          <div style={{ display: 'flex' }}>
-            <h1>Do you want the SW Companion Pass?</h1>
-          </div>
-          <Button
-            variant="contained"
-            onClick={() => {
-              setAnswer(`${answer}0`);
-            }}
-          >
-            Yes
-          </Button>
-          <Button
-            variant="contained"
-            onClick={() => {
-              setAnswer(`${answer}1`);
-            }}
-          >
-            No
-          </Button>
-        </>
-      )}
-      {answer === '1' && (
-        <>
-          <div style={{ display: 'flex' }}>
-            <h1>Are you focusing on travel or cashback?</h1>
-          </div>
-          <Button
-            variant="contained"
-            onClick={() => {
-              setAnswer(`${answer}0`);
-            }}
-          >
-            Travel
-          </Button>
-          <Button
-            variant="contained"
-            onClick={() => {
-              setAnswer(`${answer}1`);
-            }}
-          >
-            Cashback
-          </Button>
-        </>
-      )}
-      {answer.length === 2 && (
-        <>
-          <Button
-            variant="contained"
-            onClick={() => {
-              setAnswer(``);
-            }}
-          >
-            Reset
-          </Button>
-        </>
-      )}
+            <Button
+              variant="contained"
+              onClick={() => {
+                setAnswer(`${answer}1`);
+              }}
+            >
+              No
+            </Button>
+          </>
+        )}
+        {answer === '0' && (
+          <>
+            <div style={{ display: 'flex' }}>
+              <h1>Do you want the SW Companion Pass?</h1>
+            </div>
+            <Button
+              variant="contained"
+              onClick={() => {
+                setAnswer(`${answer}0`);
+              }}
+            >
+              Yes
+            </Button>
+            <Button
+              variant="contained"
+              onClick={() => {
+                setAnswer(`${answer}1`);
+              }}
+            >
+              No
+            </Button>
+          </>
+        )}
+        {answer === '1' && (
+          <>
+            <div style={{ display: 'flex' }}>
+              <h1>Are you focusing on travel or cashback?</h1>
+            </div>
+            <Button
+              variant="contained"
+              onClick={() => {
+                setAnswer(`${answer}0`);
+              }}
+            >
+              Travel
+            </Button>
+            <Button
+              variant="contained"
+              onClick={() => {
+                setAnswer(`${answer}1`);
+              }}
+            >
+              Cashback
+            </Button>
+          </>
+        )}
+        {answer.length === 2 && (
+          <>
+            <Button
+              variant="contained"
+              onClick={() => {
+                setAnswer(``);
+              }}
+            >
+              Reset
+            </Button>
+          </>
+        )}
+      </div>
 
       {answer === '00' && <One />}
       {answer === '01' && <Two />}
