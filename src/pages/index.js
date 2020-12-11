@@ -118,10 +118,12 @@ const IndexPage = () => {
         )}
       </div>
 
-      {answer === '00' && <One />}
-      {answer === '01' && <Two />}
-      {answer === '10' && <Three />}
-      {answer === '11' && <Four />}
+      <div className="answer-container" style={{ display: answer.length < 2 ? 'none' : 'block' }}>
+        {answer === '00' && <One />}
+        {answer === '01' && <Two />}
+        {answer === '10' && <Three />}
+        {answer === '11' && <Four />}
+      </div>
 
       <div className="accordion">
         <Accordion>

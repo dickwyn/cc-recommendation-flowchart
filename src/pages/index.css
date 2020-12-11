@@ -12,3 +12,9 @@
   grid-row-gap: 1rem;
   margin: 0 0 1rem 0;
 }
+
+.answer-container {
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 0.75rem 0.75rem 0 0.75rem;
+}
