@@ -23,8 +23,8 @@ const IndexPage = () => {
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
+            aria-controls="full-card-recommendation-flowchart"
+            id="panel-1-header"
           >
             Full flowchart
           </AccordionSummary>
@@ -40,8 +40,8 @@ const IndexPage = () => {
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
+            aria-controls="general-notes"
+            id="panel-2-header"
           >
             General Notes
           </AccordionSummary>
@@ -52,8 +52,8 @@ const IndexPage = () => {
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2a-content"
-            id="panel2a-header"
+            aria-controls="notes-for-newbies"
+            id="panel-3-header"
           >
             Notes for Newbies
           </AccordionSummary>
@@ -64,8 +64,8 @@ const IndexPage = () => {
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2a-content"
-            id="panel2a-header"
+            aria-controls="notes for chase cards"
+            id="panel-4-header"
           >
             Notes for Chase Cards
           </AccordionSummary>
@@ -76,8 +76,8 @@ const IndexPage = () => {
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2a-content"
-            id="panel2a-header"
+            aria-controls="notes-on-timing"
+            id="panel-5-header"
           >
             Notes on Timing
           </AccordionSummary>
